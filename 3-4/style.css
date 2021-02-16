@@ -1,0 +1,51 @@
+body{
+    width: 1000px;
+    margin: 0% ;
+}
+
+.logo {
+    width: 200px;
+    height: 120px;
+    background-color: #add8e6;
+    float:left;
+}
+
+table {
+    border-collapse: collapse ;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+td{
+    border: solid #ffffff;
+}
+
+.name{
+    height: 60px;
+    background-color: #87ceeb;
+    line-height: 60px;
+}
+.time{
+    height: 60px;
+    background-color: #00ffff;
+    line-height: 60px;
+}
+
+
+.title {
+    background-color: #87ceeb;
+}
+
+.contents {
+    background-color: #e0ffff;
+}
+header {
+    text-align: right;
+    height: 120px;
+}
+
+footer {
+    height: 50px;
+    background-color: #00ced1;
+}

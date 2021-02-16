@@ -1,0 +1,48 @@
+<!doctype>
+<html lang="ja"> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class='logo'>
+    <img src="logo.png"　width='200' height='120'>
+    </div>  
+    <?php foreach ($users_data as $value) { ?>
+        <div class = 'name'>
+            <span><?php echo 'ようこそ ' . $value['last_name'] . $value['first_name'] . ' さん'; ?></span>
+        </div>
+        <div class = 'time'>
+        <span><?php echo '最終ログイン:' . $value['last_login']; ?></span>
+        </div>
+    <?php } ?>
+    </header>
+    <table>
+        <tr class = 'title'>
+            <td>記事</td>
+            <td>タイトル</td>
+            <td>カテゴリ</td>
+            <td>本文</td>
+            <td>登校日</td>
+        </tr>
+    <?php foreach ($posts_data as $value) { ?>
+        <tr class = 'contents'>
+            <td><?php echo $value['id']; ?></td>
+            <td><?php echo $value['title']; ?></td>
+            <td><?php if($value['category_no'] == 1) { ?>
+            <?php   echo '食事';?>
+            <?php  } else if ($value['category_no'] == 2) {?>
+            <?php   echo '旅行';?>
+            <?php } else {?>
+            <?php echo 'その他'; ?>
+            <?php } ?></td>
+            <td><?php echo $value['comment']; ?></td>
+            <td><?php echo $value['created']; ?></br></td>
+        </tr>
+    <?php } ?>
+    </table>
+    <footer>
+        <p>Y&I group.inc</p>
+    </footer>
+</body>
